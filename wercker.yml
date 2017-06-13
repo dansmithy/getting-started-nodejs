@@ -16,7 +16,9 @@ build:
     - script:
         code: export NODE_ENV='testing'
     # A step that executes `npm install` command
-    - npm-install
+    - npm-install:
+        use-cache: true
+
     # A step that executes `npm test` command
     - npm-test
 
